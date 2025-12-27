@@ -1,638 +1,416 @@
+/* Import Custom Fonts: Montserrat (body) and Space Mono (headers) */
+
 * {
-
-margin: 0;
-
-padding: 0;
-
-box-sizing: border-box;
-
-/* Font Stack: Michroma repeated is redundant but kept as per original */
-
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Michroma, Michroma, Michroma, Michroma;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Changed global font to Montserrat */
+    font-family: 'Montserrat', sans-serif;
 }
-
-
 
 body {
+    /* Background setup */
+    background-image: url('bgblur.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-/* Background setup */
-
-background-image: url('bgblur.jpg');
-
-background-size: cover;
-
-background-position: center;
-
-background-repeat: no-repeat;
-
-background-attachment: fixed;
-
-
-/* Layout */
-
-display: flex;
-
-justify-content: center;
-
-color: white;
-
-text-align: center;
-
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
 }
-
-
 
 .container {
-
-width: 100%;
-
-max-width: 500px;
-
-padding: 20px;
-
-display: flex;
-
-flex-direction: column;
-
-/* Padding to prevent content being hidden by bottom navigation */
-
-padding-bottom: 100px;
-
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Padding to prevent content being hidden by bottom navigation */
+    padding-bottom: 100px;
+    min-height: 100vh;
 }
-
-
 
 header {
-
-text-align: center;
-
-font-weight: bold;
-
-font-size: 1.1rem;
-
-font-family: 'Orbitron', sans-serif;
-
-padding: 15px 0;
-
-letter-spacing: 4px;
-
-text-transform: uppercase;
-
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* Changed header font to Space Mono */
+    font-family: 'Space Mono', monospace; 
+    padding: 15px 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
-
-
-
-
 
 main {
-
-flex-grow: 1;
-
-display: flex;
-
-flex-direction: column;
-
-justify-content: center;
-
-align-items: center;
-
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
-
-
 
 h1 {
-
-font-size: 3.5rem;
-
-line-height: 1;
-
-margin-bottom: 25px;
-
-font-weight: 700;
-
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
-
-
 
 .date-badge {
-
-background: rgba(255, 255, 255, 0.15);
-
-border: 1px solid rgba(255, 255, 255, 0.3);
-
-padding: 7px 20px;
-
-border-radius: 50px;
-
-font-size: 0.9rem;
-
-margin-bottom: 70px;
-
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: 70px;
 }
-
-
 
 .tagline {
-
-font-size: 1.1rem;
-
-color: #e0eadd;
-
-margin-bottom: 50px;
-
+    font-size: 1.1rem;
+    color: #e0eadd;
+    margin-bottom: 50px;
 }
 
+/* Add this to your style.css file */
 
+.logo-center {
+    /* Optional: Add some space above/below the logo */
+    margin: 20px 0; 
+    text-align: center; /* Ensures the image is centered in case it's inline */
+}
 
-/* Button & CTA Group Styles */
+.logo-center img {
+    /* Set a max width to prevent the image from being too large on big screens */
+    max-width: 350px; 
+    /* This display setting is sometimes useful for images inside a container */
+    display: block; 
+    /* The key to horizontal centering for block elements */
+    margin: 0 auto; 
+    /* Ensure the image is accessible and a good shape (optional styling) */
+    height: auto; 
+}
+
+/* ------------------------------------------------------------------ */
+/* --- Button & CTA Group Styles --- */
+/* ------------------------------------------------------------------ */
 
 .cta-group {
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-gap: 14px;
-
-width: 100%;
-
-margin-top: 20px;
-
-}
-
-
-
-.btn {
-
-text-decoration: none;
-
-color: white;
-
-padding: 18px;
-
-border-radius: 50px;
-
-font-size: 1.1rem;
-
-transition: 0.3s;
-
-
-width: 85%;
-
-max-width: 320px;
-
-display: inline-block;
-
-text-align: center;
-
-}
-
-
-
-.btn.primary {
-
-background: rgba(255, 255, 255, 0.15);
-
-border: 1px solid rgba(255, 255, 255, 0.3);
-
-}
-
-
-
-/* The .btn.secondary rule has been removed as requested. */
-
-
-
-.btn:active {
-
-background: rgba(255, 255, 255, 0.3);
-
-}
-
-
-
-/* ------------------------------------------------------------------ */
-
-/* --- DROPDOWN (SELECT) STYLES (UPDATED FOR STABILITY & COLOR) --- */
-
-/* ------------------------------------------------------------------ */
-
-
-
-.select-container {
-
-position: relative; /* CRITICAL for positioning the custom arrow */
-
-margin: 20px auto;
-
-max-width: 320px;
-
-width: 85%;
-
-}
-
-
-
-select {
-
-/* Glassmorphism button style */
-
-background: rgba(255, 255, 255, 0.2);
-
-border: 8px solid rgba(25, 255, 150, 0.1);
-
-border-radius: 50px;
-
-color: white;
-
-
-/* Dimensions & Layout */
-
-width: 100%;
-
-padding: 18px 25px;
-
-font-size: 1.1rem;
-
-box-sizing: border-box;
-
-display: block;
-
-cursor: pointer;
-
-
-/* Remove default browser styles/arrows */
-
-background-image: none;
-
-background-color: rgba(255, 255, 255, 0.2);
-
--webkit-appearance: none;
-
--moz-appearance: none;
-
-appearance: none;
-
-}
-
-
-
-/* Custom Arrow Icon (using pseudo-element for better cross-browser stability, especially Chrome) */
-
-.select-container::after {
-
-content: '\25BE'; /* Unicode character for a downward arrow (▼) */
-
-color: white;
-
-font-size: 1.2rem;
-
-pointer-events: none;
-
-
-/* Positioning */
-
-position: absolute;
-
-top: 50%;
-
-right: 35px;
-
-transform: translateY(-50%);
-
-}
-
-
-
-/* Droplist Option Style (Updated to Dark Green) */
-
-select option {
-
-background: #004d40; /* Dark Green color for option background */
-
-color: white;
-
-}
-
-
-
-/* ------------------------------------------------------------------ */
-
-/* --- PROGRAM CARD STYLES --- */
-
-/* ------------------------------------------------------------------ */
-
-
-
-.program.list {
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-gap: 14px;
-
-width: 100%;
-
-margin-top: 20px;
-
-}
-
-
-
-.program-card1 {
-
-background: rgba(13, 43, 28, 0.8);
-
-border: 1px solid rgba(255, 255, 255, 0.2);
-
-border-radius: 15px;
-
-/* ... other styles (removed redundant ones for simplicity, kept core styling) ... */
-
-width: 85%;
-
-max-width: 320px;
-
-padding: 18px;
-
-text-align: center;
-
-color: white;
-
-font-size: 1.1rem;
-
-}
-
-
-
-.program-card2 {
-
-background: rgba(77, 10, 29, 0.8);
-
-border: 1px solid rgba(24, 61, 61, 1);
-
-border-radius: 15px;
-
-/* ... core styling ... */
-
-width: 85%;
-
-max-width: 320px;
-
-padding: 18px;
-
-text-align: center;
-
-color: white;
-
-font-size: 1.1rem;
-
-}
-
-
-
-.program-card3 {
-
-background: rgba(0, 35, 68, 0.8);
-
-border: 1px solid rgba(255, 255, 255, 0.2);
-
-border-radius: 15px;
-
-/* ... core styling ... */
-
-width: 85%;
-
-max-width: 320px;
-
-padding: 18px;
-
-text-align: center;
-
-color: white;
-
-font-size: 1.1rem;
-
-}
-
-
-
-/* --- Navigation Bar Styles (Bottom Nav) --- */
-
-.bottom-nav {
-
-position: fixed;
-
-bottom: 0;
-
-left: 0;
-
-width: 100%;
-
-background: rgba(255, 255, 255, 0.1);
-
-backdrop-filter: blur(15px);
-
-display: flex;
-
-justify-content: space-around;
-
-padding: 12px 0;
-
-border-top: 1px solid rgba(255, 255, 255, 0.2);
-
-padding-bottom: 25px;
-
-}
-
-
-
-.nav-item {
-
-text-decoration: none;
-
-color: white;
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-gap: 4px;
-
-opacity: 0.6;
-
-transition: 0.3s;
-
-}
-
-
-
-.nav-item.active {
-
-opacity: 1;
-
-font-weight: bold;
-
-}
-
-
-
-/* --- Footer Styles --- */
-
-footer {
-
-width: 100%;
-
-margin-top: 40px;
-
-padding: 15px 0;
-
-border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-}
-
-
-
-.footer-text {
-
-font-size: 0.9rem;
-
-color: rgba(255, 255, 255, 0.7);
-
-line-height: 1.5;
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-font-weight: 500;
-
-}
-
-
-
-.address-line {
-
-font-size: 0.7rem;
-
-color: rgba(255, 255, 255, 0.5);
-
-font-weight: 400;
-
-display: block;
-
-}
-
-
-/* ------------------------------------------------------------------ */
-/* --- PROGRAM LIST & CARD STYLES (PROFESSIONAL LOOK) --- */
-/* ------------------------------------------------------------------ */
-
-/* Grouping container for program cards */
-.cta-group {
-    /* Retain original cta-group styles for layout */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px; /* Increased gap for better separation */
+    gap: 16px;
     width: 100%;
-    margin-top: 25px; /* Slightly more margin */
+    margin-top: 25px;
 }
 
-/* Base style for all program cards (Replaces .glass-green) */
-.glass-green {
-    /* Core Glassmorphism Effect */
-    background: rgba(255, 255, 255, 0.08); /* Lighter, more subtle background */
-    backdrop-filter: blur(10px); /* Stronger blur for a premium feel */
-    -webkit-backdrop-filter: blur(10px);
-    
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtler white border */
-    border-radius: 12px; /* Slightly less rounded than buttons */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-
-    /* Layout & Dimensions */
-    width: 90%; /* Wider than buttons for better content space */
-    max-width: 400px;
-    padding: 18px 20px;
-    display: flex;
-    align-items: center; /* Align icon and text vertically */
-    text-align: left;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.glass-green:hover {
-    transform: translateY(-2px); /* Subtle hover effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Icon Container (Using a simple box as a placeholder for an actual icon) */
-.icon-box {
-    flex-shrink: 0; /* Prevents the icon from shrinking */
-    width: 45px;
-    height: 45px;
-    background-color: #00bcd4; /* Accent color: Cyan/Teal */
-    border-radius: 8px;
-    margin-right: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+.btn {
+    text-decoration: none;
     color: white;
-    /* Placeholder for a dynamic icon or initial */
-    content: ''; /* Ensure it's treated as a box */
+    padding: 18px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    width: 85%;
+    max-width: 320px;
+    display: inline-block;
+    text-align: center;
 }
 
-/* Specific icon-box colors for different programs (Optional) */
-.glass-green:nth-child(1) .icon-box { background-color: #4CAF50; } /* Green for Mas'ala */
-.glass-green:nth-child(2) .icon-box { background-color: #FF9800; } /* Orange for Magazine */
-.glass-green:nth-child(3) .icon-box { background-color: #2196F3; } /* Blue for Social Tweet */
-.glass-green:nth-child(4) .icon-box { background-color: #9C27B0; } /* Purple for Book Review */
-.glass-green:nth-child(5) .icon-box { background-color: #F44336; } /* Red for Mental Ability */
-
-
-/* Text Details Container */
-.details {
-    flex-grow: 1; /* Allows the text to take up the remaining space */
+.btn.primary {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Program Title */
-.details h3 {
-    font-size: 1.25rem;
-    font-weight: 600; /* Medium-bold for titles */
-    margin: 0;
-    line-height: 1.2;
-    color: white; /* Ensures good contrast */
-}
-
-/* Time Slot */
-.details p {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.7); /* Subtle grey for secondary info */
-    margin: 4px 0 0 0;
-}
-
-/* Professional update for the back button */
 .btn.secondary {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: rgba(255, 255, 255, 0.8);
     margin-top: 30px;
-    width: 200px; /* Adjusted width for a cleaner look */
+    width: 200px;
 }
 
 .btn.secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     color: white;
+}
+
+.btn:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ------------------------------------------------------------------ */
+/* --- DROPDOWN (SELECT) STYLES --- */
+/* ------------------------------------------------------------------ */
+
+.select-container {
+    position: relative;
+    margin: 20px auto;
+    max-width: 320px;
+    width: 85%;
+}
+
+select {
+    /* Glassmorphism button style */
+    background: rgba(255, 255, 255, 0.2);
+    border: 8px solid rgba(25, 255, 150, 0.1);
+    border-radius: 50px;
+    color: white;
+
+    /* Dimensions & Layout */
+    width: 100%;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    display: block;
+    cursor: pointer;
+
+    /* Remove default browser styles/arrows */
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Custom Arrow Icon */
+.select-container::after {
+    content: '\25BE'; /* Unicode character for a downward arrow (▼) */
+    color: white;
+    font-size: 1.2rem;
+    pointer-events: none;
+
+    /* Positioning */
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
+}
+
+/* Droplist Option Style (Updated to Dark Green) */
+select option {
+    background: #004d40; /* Dark Green color for option background */
+    color: white;
+}
+
+/* ------------------------------------------------------------------ */
+/* --- PROGRAM/RESULT CARD STYLES (Vertical Layout) --- */
+/* ------------------------------------------------------------------ */
+
+/* Base style for all program cards (Glassmorphism Effect) */
+.glass-green {
+    /* Core Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    /* --- CRITICAL CHANGE FOR VERTICAL LAYOUT --- */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text within the card */
+    /* --------------------------------------------- */
+
+    /* Layout & Dimensions */
+    width: 90%;
+    max-width: 400px;
+    padding: 25px 20px; /* Increased padding top/bottom for vertical spacing */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.glass-green:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Container */
+.icon-box {
+    flex-shrink: 0;
+    width: 60px; /* Increased size for vertical display */
+    height: 60px; /* Increased size for vertical display */
+    background-color: #00bcd4;
+    border-radius: 12px; /* Slightly more square */
+    margin: 0 0 15px 0; /* Centered margin and space below icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* Larger icon size */
+    font-weight: bold;
+    color: white;
+}
+
+/* Specific default icon-box colors for different programs */
+.glass-green:nth-child(1) .icon-box { background-color: #4CAF50; }
+.glass-green:nth-child(2) .icon-box { background-color: #FF9800; }
+.glass-green:nth-child(3) .icon-box { background-color: #2196F3; }
+.glass-green:nth-child(4) .icon-box { background-color: #9C27B0; }
+.glass-green:nth-child(5) .icon-box { background-color: #F44336; }
+
+/* Text Details Container */
+.details {
+    flex-grow: 1;
+    width: 100%; /* Ensure details section spans full width */
+}
+
+/* Program Title */
+.details h3 {
+    font-size: 1.5rem; /* Slightly larger title for impact */
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: white;
+}
+
+/* Time Slot/Description */
+.details p {
+    font-size: 1rem; /* Slightly larger description text */
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 6px 0 0 0;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* --- RESULT CARD SPECIFIC STYLES (GOLD, SILVER, BRONZE) --- */
+/* ------------------------------------------------------------------ */
+
+/* 1st Place - Gold Accent */
+.glass-green.result-1 .icon-box { 
+    background-color: #FFD700; /* Gold */
+    color: #404040;
+}
+
+/* 2nd Place - Silver Accent */
+.glass-green.result-2 .icon-box { 
+    background-color: #C0C0C0; /* Silver */
+    color: #404040;
+}
+
+/* 3rd Place - Bronze Accent */
+.glass-green.result-3 .icon-box { 
+    background-color: #CD7F32; /* Bronze */
+    color: white;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* --- Legacy Program Card Styles --- */
+/* ------------------------------------------------------------------ */
+
+.program.list { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.program-card1 {
+    background: rgba(13, 43, 28, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    width: 85%;
+    max-width: 320px;
+    padding: 18px;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.program-card2 {
+    background: rgba(77, 10, 29, 0.8);
+    border: 1px solid rgba(24, 61, 61, 1);
+    border-radius: 15px;
+    width: 85%;
+    max-width: 320px;
+    padding: 18px;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.program-card3 {
+    background: rgba(0, 35, 68, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    width: 85%;
+    max-width: 320px;
+    padding: 18px;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* --- Navigation Bar Styles (Bottom Nav) --- */
+/* ------------------------------------------------------------------ */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 25px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.nav-item.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------------------ */
+/* --- Footer Styles --- */
+/* ------------------------------------------------------------------ */
+
+footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+.address-line {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    display: block;
 }
