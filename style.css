@@ -80,13 +80,13 @@ h1 {
 
 .logo-center {
     /* Optional: Add some space above/below the logo */
-    margin: 15px 10px; 
+    margin: 10px 10px; 
     text-align: center; /* Ensures the image is centered in case it's inline */
 }
 
 .logo-center img {
     /* Set a max width to prevent the image from being too large on big screens */
-    max-width: 350px; 
+    max-width: 300px; 
     /* This display setting is sometimes useful for images inside a container */
     display: block; 
     /* The key to horizontal centering for block elements */
