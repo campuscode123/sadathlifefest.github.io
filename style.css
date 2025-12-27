@@ -80,7 +80,7 @@ h1 {
 
 .logo-center {
     /* Optional: Add some space above/below the logo */
-    margin: 20px 0; 
+    margin: 20px 10px; 
     text-align: center; /* Ensures the image is centered in case it's inline */
 }
 
