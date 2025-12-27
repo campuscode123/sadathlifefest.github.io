@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - SLF'25</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* BASIC CSS FOR THE DROPDOWN (You should put this in your style.css) */
+        .select-container {
+            margin: 20px auto;
+            max-width: 400px; /* Optional: for better mobile view */
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #007bff; /* Example primary color */
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="logo">SLF'25</div>
+        </header>
+
+        <main>
+            <h1>Results</h1>
+            
+            <div class="select-container">
+                <select id="event-selector" onchange="goToPage(this)">
+                    <option value="">-- Select an Event Result --</option>
+                    <option value="THARTHEEL.html">THARTHEEL</option>
+                    <option value="MADH-SONG.html">MADH SONG</option>
+                    <option value="MAPPILAPPATTU.html">MAPPILAPPATTU</option>
+                    <option value="HERANCIA.html">HERENCIA</option>
+                    <option value="QAWWALI.html">QAWWALI</option>
+                    <option value="ELOCUTION URDU.html">ELOCUTION URDU</option>
+                    <option value="QURAN-PREBHASHANAM.html">QURAN PREBHASHANAM</option>
+                    <option value="SEERA-PARAYANAM.html">SEERA PARAYANAM</option>
+                    <option value="CAMPUS-MELODY.html">CAMPUS MELODY</option>
+                    <option value="INTERNATIONAL-THADREES.html">INTERNATIONAL THADREES</option>
+                    <option value="PODCAST.html">PODCAST</option>
+                    <option value="WALK-AND-TALK.html">WALK AND TALK</option>
+                    <option value="KNOWLEDGE-OLYMPIAD.html">KNOWLEDGE OLYMPIAD</option>
+                    <option value="MASTER-TWEET.html">MASTER TWEET</option>
+                    <option value="NEWS-CASTING.html">NEWS CASTING</option>
+                    <option value="MAKTHABA- JENIUS.html">MAKTHABA JENIUS</option>
+                    <option value="THAHREER.html">THAHREER</option>
+                    <option value="ESSAY-MALAYALAM.html">ESSAY(ML)</option>
+                    <option value="TRANSLATION-ENGLISH.html">TRANSLATION (ENG)</option>
+                    <option value="PHOTOGRAPHY.html">PHOTOGRAPHY</option>
+                    <option value="E-POSTER.html">E POSTER MAKING</option>
+                    <option value="BOOK-REVIEW.html">BOOK REVIEW</option>
+                    <option value="HAIKU.html">HAIKU</option>
+                    <option value="MAS'ALA-SAMGRAHAM.html">MAS'ALA SAMGRAHAM</option>
+                    <option value="AHJIYATHUL-ALFIYA.html">AHJIYATHUL ALFIYA</option>
+                    <option value="SPOT-MAGAZINE.html">SPOT MAGAZINE</option>
+                    <option value="VIDEO-TRANSLATION.html">VIDEO TRANSLATION</option>
+                    <option value="MENTAL-EBILITY-TEST.html">MENTAL EBILITY TEST</option>
+                    <option value="AI- POEM-WRITING.html">AI POEM WRITING</option>
+                    <option value="COLLAGE.html">COLLAGE</option>
+                    <option value="SOCIAL-TWEET.html">SOCIAL TWEET</option>
+                </select>
+            </div>
+
+            <div class="cta-group">
+                <a href="index.html" class="btn secondary">← Back Home</a>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        function goToPage(selectElement) {
+            const url = selectElement.value;
+            if (url) {
+                // Navigate to the selected URL
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>
