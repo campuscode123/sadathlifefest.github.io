@@ -80,13 +80,13 @@ h1 {
 
 .logo-center {
     /* Optional: Add some space above/below the logo */
-    margin: 10px 10px; 
+    margin: 20px 0; 
     text-align: center; /* Ensures the image is centered in case it's inline */
 }
 
 .logo-center img {
     /* Set a max width to prevent the image from being too large on big screens */
-    max-width: 300px; 
+    max-width: 350px; 
     /* This display setting is sometimes useful for images inside a container */
     display: block; 
     /* The key to horizontal centering for block elements */
@@ -414,3 +414,48 @@ footer {
     font-weight: 400;
     display: block;
 }
+
+/* ------------------------------------------------------------------ */
+/* --- COMPLETED PROGRAM STYLES --- */
+/* ------------------------------------------------------------------ */
+
+.glass-green.program-completed {
+    /* പൂർണ്ണമായും പച്ച നിറം നൽകുന്നു (Solid Green Background) */
+    background: #4CAF50; /* ഒരു നല്ല പച്ച നിറം */
+    
+    /* ഗ്ലാസ്മോർഫിസം ഇഫക്റ്റുകൾ മാറ്റുന്നു */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    
+    /* ബോർഡർ അല്പം കട്ടിയാക്കുന്നു */
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    
+    /* ഷാഡോ ഇഫക്റ്റ് മാറ്റുന്നു */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    
+    /* ഹോവർ ഇഫക്റ്റ് മാറ്റുന്നു */
+    transform: none;
+    cursor: default;
+}
+
+/* ഹോവർ ചെയ്യുമ്പോൾ നിറം മാറുന്നത് ഒഴിവാക്കാൻ */
+.glass-green.program-completed:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* പൂർത്തിയാക്കിയ പ്രോഗ്രാമിലെ ടൈറ്റിലിൻ്റെ നിറം മാറ്റാം */
+.glass-green.program-completed .details h3 {
+    color: white; /* വെള്ള നിറം നിലനിർത്തുന്നു */
+}
+
+/* പൂർത്തിയാക്കിയ പ്രോഗ്രാമിലെ സമയത്തിൻ്റെ നിറം മാറ്റാം */
+.glass-green.program-completed .details p {
+    color: rgba(255, 255, 255, 0.9); /* കുറച്ചുകൂടി തെളിഞ്ഞ വെള്ള നിറം */
+    font-weight: 500;
+}
+
+/* ഐക്കൺ ബോക്‌സിൻ്റെ സ്റ്റൈൽ മാറ്റുന്നില്ലെങ്കിൽ ഈ ഭാഗം ഒഴിവാക്കാം */
+/* .glass-green.program-completed .icon-box {
+    background-color: #388E3C; 
+} */
