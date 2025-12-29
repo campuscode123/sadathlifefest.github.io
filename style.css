@@ -420,42 +420,127 @@ footer {
 /* ------------------------------------------------------------------ */
 
 .glass-green.program-completed {
-    /* പൂർണ്ണമായും പച്ച നിറം നൽകുന്നു (Solid Green Background) */
-    background: #4CAF50; /* ഒരു നല്ല പച്ച നിറം */
+    background: #4CAF50; 
     
-    /* ഗ്ലാസ്മോർഫിസം ഇഫക്റ്റുകൾ മാറ്റുന്നു */
+    /* Remove glassmorphism effects */
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     
-    /* ബോർഡർ അല്പം കട്ടിയാക്കുന്നു */
+    /* Thicker border */
     border: 1px solid rgba(255, 255, 255, 0.5); 
     
-    /* ഷാഡോ ഇഫക്റ്റ് മാറ്റുന്നു */
+    /* Shadow effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
     
-    /* ഹോവർ ഇഫക്റ്റ് മാറ്റുന്നു */
+    /* Hover effect removed */
     transform: none;
     cursor: default;
 }
 
-/* ഹോവർ ചെയ്യുമ്പോൾ നിറം മാറുന്നത് ഒഴിവാക്കാൻ */
+/* Remove hover color change */
 .glass-green.program-completed:hover {
     transform: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* പൂർത്തിയാക്കിയ പ്രോഗ്രാമിലെ ടൈറ്റിലിൻ്റെ നിറം മാറ്റാം */
+/* Completed program title color */
 .glass-green.program-completed .details h3 {
-    color: white; /* വെള്ള നിറം നിലനിർത്തുന്നു */
+    color: white; 
 }
 
-/* പൂർത്തിയാക്കിയ പ്രോഗ്രാമിലെ സമയത്തിൻ്റെ നിറം മാറ്റാം */
+/* Completed program time color */
 .glass-green.program-completed .details p {
-    color: rgba(255, 255, 255, 0.9); /* കുറച്ചുകൂടി തെളിഞ്ഞ വെള്ള നിറം */
+    color: rgba(255, 255, 255, 0.9); 
     font-weight: 500;
 }
 
-/* ഐക്കൺ ബോക്‌സിൻ്റെ സ്റ്റൈൽ മാറ്റുന്നില്ലെങ്കിൽ ഈ ഭാഗം ഒഴിവാക്കാം */
-/* .glass-green.program-completed .icon-box {
-    background-color: #388E3C; 
-} */
+/* ------------------------------------------------------------------ */
+/* --- CURRENTLY RUNNING PROGRAM STYLES --- */
+/* ------------------------------------------------------------------ */
+
+.glass-green.program-current {
+    /* Yellow background */
+    background: #FFEB3B; 
+    
+    /* Black text color */
+    color: #212121; 
+    
+    /* Remove glassmorphism effects */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    
+    /* Border color */
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    
+    /* Shadow effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    
+    /* Hover effect removed */
+    transform: none;
+    cursor: default;
+}
+
+/* Remove hover color change */
+.glass-green.program-current:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Current program title color */
+.glass-green.program-current .details h3 {
+    color: #212121; 
+}
+
+/* Current program time color */
+.glass-green.program-current .details p {
+    color: #555555; 
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------------ */
+/* --- Program Legend Styles --- */
+/* ------------------------------------------------------------------ */
+
+.program-legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    padding: 15px 0 30px 0; 
+    border-bottom: none; 
+    
+    /* Added space above the legend */
+    margin-top: 15px; 
+    
+    margin-bottom: 20px; 
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+/* Color Definitions */
+.completed-color {
+    background-color: #4CAF50; /* Completed Program Color (Solid Green) */
+}
+
+.current-color {
+    background-color: #FFEB3B; /* Current Program Color (Yellow) */
+}
+
+.upcoming-color {
+    /* Glass green (Default color for upcoming/pending) */
+    background-color: rgba(255, 255, 255, 0.3); 
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
