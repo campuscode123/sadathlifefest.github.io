@@ -1,0 +1,23 @@
+{
+  "name": "Sadath Life Fest",
+  "short_name": "SLF'25",
+  "description": "Ma'din Sadath Academy",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#00FFFFFF",
+  "theme_color": "#00FFFFFF",
+  "icons": [
+    {
+      "src": "slf.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "slf.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
