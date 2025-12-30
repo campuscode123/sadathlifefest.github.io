@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - SLF'25</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <header>            
+          <div class="logo">MAKTHABA GENIOUS</div>        
+      </header>
+
+      <main>    
+          <h1>Results</h1>
+          
+          <div class="program list"> 
+              
+              <div class="glass-green result-1">
+                  <div class="icon-box">1</div>
+                  <div class="details">                
+                      <h3>SAYYID AFLAH HYDROOSY</h3>                
+                      <p>FARAMA</p>            
+                  </div>
+              </div>
+
+              <div class="glass-green result-2">
+                  <div class="icon-box">2</div>
+                  <div class="details">                
+                      <h3>SAYYID AFNAN HYDROOSY</h3>                
+                      <p>FUSTAT</p>            
+                  </div>
+              </div>
+
+              <div class="glass-green result-3">
+                  <div class="icon-box">3</div>
+                  <div class="details">                
+                      <h3>SAYYID MALIK JAMALULAILY</h3>                
+                      <p>FUSTAT</p>            
+                  </div>
+              </div>
+
+<div class="glass-green result-3">
+                  <div class="icon-box">3</div>
+                  <div class="details">                
+                      <h3>SAYYID SHAHEEM BUKHARI</h3>                
+                      <p>FAYYUM</p>            
+                  </div>
+              </div>
+
+          </div>
+          <div class="cta-group">        
+              <a href="https://github.com/sadathlifefest/Results/releases/download/Results/default.jpg" class="btn primary">Download Result</a>    
+          </div>
+          
+      </main>
+    </div>
+</body>
+</html>
